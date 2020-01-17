@@ -15,12 +15,9 @@ RUN cd /usr/bin/ && \
    tar zxf kallisto_linux-v0.46.1.tar.gz && \
    rm kallisto_linux-v0.46.1.tar.gz && \
    # install bustools
-   git clone https://github.com/BUStools/bustools.git && \
-   cd bustools && \
-   mkdir build && \
-   cd build && \
-   make && \
-   make install
+   wget https://github.com/BUStools/bustools/releases/download/v0.39.3/bustools_linux-v0.39.3.tar.gz && \
+   tar zxf bustools_linux-v0.39.3.tar.gz && \
+   rm bustools_linux-v0.39.3.tar.gz
 
    # install miniconda3
 RUN wget --quiet https://repo.anaconda.com/miniconda/Miniconda3-4.5.11-Linux-x86_64.sh -O ~/miniconda.sh && \
