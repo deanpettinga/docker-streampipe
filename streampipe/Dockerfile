@@ -27,8 +27,8 @@ RUN wget --quiet https://repo.anaconda.com/miniconda/Miniconda3-4.5.11-Linux-x86
    ln -s /opt/conda/etc/profile.d/conda.sh /etc/profile.d/conda.sh && \
    echo ". /opt/conda/etc/profile.d/conda.sh" >> ~/.bashrc && \
    echo "conda activate base" >> ~/.bashrc && \
-   conda upgrade -n base conda
+   /opt/conda/bin/conda upgrade -n base conda
    # install snakemake
-   conda install -c bioconda -c conda-forge snakemake==5.9.1
+   /opt/conda/bin/conda install -c bioconda -c conda-forge snakemake==5.9.1
 
 ENV PATH=/opt/conda/bin:/usr/bin/kallisto:/usr/bin/bustools:$PATH
